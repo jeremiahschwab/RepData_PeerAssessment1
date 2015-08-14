@@ -22,7 +22,7 @@
   hist(castedtotaldata$steps, col="cyan",main = "Total Steps Per Day Histogram",xlab = "Total Steps Per Day")
 ```
 
-![](PA1_files/figure-html/unnamed-chunk-2-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
 
 ### Average total number of steps taken per day
 
@@ -49,7 +49,7 @@
   plot(castedaveragedata$interval,castedaveragedata$steps,type = "l",xlab = "Time Interval", ylab = "Average Steps Across All Days",main = "Average Steps Across All Days Per Time Interval")
 ```
 
-![](PA1_files/figure-html/unnamed-chunk-5-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
 
 ### The 5-minute interval, on average across all the days in the dataset, that contains the maximum number of steps
 
@@ -90,7 +90,7 @@
   hist(castedenhanceddata$steps, col="cyan",main = "Total Steps Per Day Histogram",xlab = "Total Steps Per Day")
 ```
 
-![](PA1_files/figure-html/unnamed-chunk-9-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-9-1.png) 
 
 ### Average total number of steps taken per day with filled missing data
 
@@ -141,7 +141,7 @@ The mean has not changed since averages were used to fill the missing data. But 
   xyplot(steps ~ interval | daytype,data = castedtypedata,type = "l",layout = c(1,2))
 ```
 
-![](PA1_files/figure-html/unnamed-chunk-12-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 
 
 During the weekdays, there is a large spike in the morning and a smaller spike in the afternoon, likely before and after work.
 
