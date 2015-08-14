@@ -87,7 +87,7 @@
   meltedenhanceddata <- melt(enhanceddata, id=c("date"), measure = "steps")
   castedenhanceddata <- dcast(meltedenhanceddata, date ~ variable, sum)
   
-  hist(castedenhanceddata$steps, col="cyan",main = "Total Steps Per Day Histogram",xlab = "Total Steps Per Day")
+  hist(castedenhanceddata$steps, col="cyan",main = "Total Steps Per Day With Filled In Missing Data Histogram",xlab = "Total Steps Per Day")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-9-1.png) 
@@ -138,7 +138,7 @@ The mean has not changed since averages were used to fill the missing data. But 
   meltedtypedata <- melt(enhanceddata, id=c("interval","daytype"), measure = "steps")
   castedtypedata <- dcast(meltedtypedata, interval + daytype ~ variable, mean)
   
-  xyplot(steps ~ interval | daytype,data = castedtypedata,type = "l",layout = c(1,2))
+  xyplot(steps ~ interval | daytype,data = castedtypedata,type = "l",layout = c(1,2),xlab = "Time Interval", ylab = "Average Steps Across All Days", main = "Average Steps Across All Days Per Time Interval By Day Type")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 
